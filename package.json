@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jimmitox/UcreativaAutomationModulo2/issues"
   },
-  "homepage": "https://github.com/jimmitox/UcreativaAutomationModulo2#readme"
+  "homepage": "https://github.com/jimmitox/UcreativaAutomationModulo2#readme",
+  "devDependencies": {
+    "@wdio/cli": "^6.3.6"
+  }
 }
