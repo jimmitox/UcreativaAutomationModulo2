@@ -8,15 +8,17 @@ class navigationPage extends Page {
      * define selectors using getter methods
      */
     get conduitLabel () { return $('a.navbar-brand.ng-binding') }
-    get signInLink () { return $('=Sign In') }
+    get signInLink () { return $('a=Sign in') }
     get signUpLink () { return $('*=up') }
 
-    goToSignIn(){
-        this.signInLink().click();
+
+
+    goToSignIn() {
+        this.signInLink.click();
     }
 
     goConduitText(){
-       return  this.signInLink().click();
+       return  this.conduitLabel.getText();
     }
 
     open (){
