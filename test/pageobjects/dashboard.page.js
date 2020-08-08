@@ -11,7 +11,10 @@ class DashboardPage extends Page {
      get noArticlesLabel () {return $('div=No articles are here... yet.')};
      get yourFeedTap() {return $('.nav-link=Your Feed')};
      get globalFeedTap(){return $('.nav-link=Global Feed')};
-
+    //Usando selector q sirve para los childs de un grupo Tag por ejm para listas dos doallres
+    // get articlesRows() {return $$('//article-list/article-preview')};
+    //Concatenacion usando dos tipos de selectiores distontos
+    get articlesRows() {return $('<article-list />').$$('<article-preview />')};
  
 
 //Hacer publicos pa verlos en otras claser 
@@ -25,6 +28,10 @@ getYourFeedTap (){
 
 getGlobalFeedTap(){
     return this.globalFeedTap;
+}
+
+getArticlesList(){
+    return this.articlesRows;
 }
 
 }

@@ -10,7 +10,7 @@ describe('My Login application', () => {
         NavigationPage.goToSignIn();
         browser.pause(5000);
         LoginPage.login('jimmzo91@gmail.com', 'Ninalecole');
-        expect(browser).toHaveURL('https://demo.realworld.io/#/');
+        expect(browser).toHaveUrl('https://demo.realworld.io/#/');
         expect(DashboardPage.getNoArticlesLabel()).toBeDisplayed();
         expect(DashboardPage.getYourFeedTap()).toHaveAttribute('class', 'nav-link active');        
 
@@ -18,12 +18,13 @@ describe('My Login application', () => {
 
     it('should open Global feed tab',()=>{
         DashboardPage.getGlobalFeedTap().click();
+        browser.pause(10000);
+        //console.log(DashboardPage.getArticlesList().size );
+        console.log('Holis GlobalTap' + DashboardPage.getArticlesList().lenght);
         // expect(DashboardPage.getGlobalFeedTap()).toHaveAttribute('class', 'nav-link active');
         //Revisa q la clase sea active 
         expect(DashboardPage.getGlobalFeedTap()).toHaveClass('active', {message: 'Not active tap!',});
-        //  expect(DashboardPage.getGlobalFeedTap()).toHaveProperty('class', 'nav-link active');
-        expect(DashboardPage.getGlobalFeedTap()).toBeClickable();
-        expect(DashboardPage.getGlobalFeedTap()).toBeSelected();
+        expect(DashboardPage.getArticlesList()).toBeElementsArrayOfSize({eq:10});
     });
 
    
