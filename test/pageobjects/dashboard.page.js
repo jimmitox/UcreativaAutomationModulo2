@@ -15,24 +15,28 @@ class DashboardPage extends Page {
     // get articlesRows() {return $$('//article-list/article-preview')};
     //Concatenacion usando dos tipos de selectiores distontos
     get articlesRows() {return $('<article-list />').$$('<article-preview />')};
+    get articlesRowsReadMore() {return $('<article-list />').$$('<article-preview />')[1].$('span=Read more...')};
  
-
 //Hacer publicos pa verlos en otras claser 
-getNoArticlesLabel(){
-    return this.noArticlesLabel;
-}
+    getNoArticlesLabel(){
+        return this.noArticlesLabel;
+    }
 
-getYourFeedTap (){
-    return this.yourFeedTap;
-}
+    getYourFeedTap (){
+        return this.yourFeedTap;
+    }
 
-getGlobalFeedTap(){
-    return this.globalFeedTap;
-}
+    getGlobalFeedTap(){
+        return this.globalFeedTap;
+    }
 
-getArticlesList(){
-    return this.articlesRows;
-}
+    getArticlesList(){
+        return this.articlesRows;
+    }
+    getReadMoreAnchor(){
+        return this.articlesRowsReadMore;
+    }
+
 
 }
 

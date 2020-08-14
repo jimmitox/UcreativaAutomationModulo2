@@ -190,14 +190,19 @@ exports.config = {
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
      */
-    // beforeSuite: function (suite) {
-    // },
+    //Before test go to this URL or open this file read this package etc
+     beforeSuite: function (suite) {
+        browser.url(`https://demo.realworld.io/`)
+    },
     /**
      * Function to be executed before a test (in Mocha/Jasmine) starts.
      */
     // beforeTest: function (test, context) {
     // },
     /**
+     * 
+     * 
+     *  //Hocks are like before or after test thing on java
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
      */
